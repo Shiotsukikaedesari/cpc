@@ -1,3 +1,4 @@
-test git file;
-now have a test;
-twice test;
+verson:1.0.0;
+优化轮播的点击事件
+
+将要实现：主页伪弹幕与登录逻辑
