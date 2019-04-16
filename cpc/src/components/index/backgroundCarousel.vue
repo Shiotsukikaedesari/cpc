@@ -56,10 +56,10 @@ export default {
     data(){
         return {
             picturePath: [
-                require('../../assets/img/index/background1.jpg'),
-                require('../../assets/img/index/background2.jpg'),
-                require('../../assets/img/index/background3.jpg'),
-                require('../../assets/img/index/background4.jpg')
+                // "./static/img/index/background1.jpg",
+                // "./static/img/index/background2.jpg",
+                // "./static/img/index/background3.jpg",
+                // "./static/img/index/background4.jpg"
                 ],
             carouslBackground: '',
             divBackground: '',
@@ -77,21 +77,21 @@ export default {
 
              sourcelist: [
                  {
-                 content:'pixivID: 34356734',
-                 aHref: 'https://www.pixiv.net/member_illust.php?illust_id=34356734'
+                 content:'',//pixivID: 34356734
+                 aHref: ''//https://www.pixiv.net/member_illust.php?illust_id=34356734
                  },
                  {
-                 content:'pixivID: 123456',
-                 aHref: 'https://www.pixiv.net/member_illust.php?illust_id=34356734'
+                 content:'',//pixivID: 123456'
+                 aHref: ''//https://www.pixiv.net/member_illust.php?illust_id=34356734
                  },
                  {
-                 content:'pixivID: 45645757',
-                 aHref: 'https://www.pixiv.net/member_illust.php?illust_id=34356734'
+                 content:'',//pixivID: 45645757',
+                 aHref: ''//https://www.pixiv.net/member_illust.php?illust_id=34356734
                  },
                  {
-                 content:'pixivID: 345754',
-                 aHref: 'https://www.pixiv.net/member_illust.php?illust_id=34356734'
-                 },
+                 content:'',//pixivID: 345754',
+                 aHref: ''//https://www.pixiv.net/member_illust.php?illust_id=34356734'
+                 }
                  ],
             anvClass: [true, false, false, false],
             times : 0,
@@ -168,13 +168,22 @@ export default {
         }
     },
 
-    mounted(){
-        /////////////////////加载轮播图片与数据//////////////////
+    created(){
+         /////////////////////加载轮播图片与数据//////////////////
+        let _this = this;
         this.$http.get('http://127.0.0.1/cpc/php/index/load_img.php').then(res => {
-            console.log(res);
+            let body = res.body;
+            body.forEach((elem, i, arr) => {
+                _this.picturePath[i] = elem.ic_img;
+                _this.sourcelist[i].content = 'pixivID:' + elem.ic_pid;
+                _this.sourcelist[i].aHref = 'https://www.pixiv.net/member_illust.php?illust_id=' + elem.pid;
+            });
         });
+    },
+
+    mounted(){
         /////////////////挂载初始轮播///////////////
-        this.rolling();
+        // this.rolling();
         this.carouselTimer = setInterval(this.rolling, 7000);
     }
 }

@@ -19,12 +19,12 @@ CREATE TABLE cpc_index_corsouel(
 /*******************/
 /******数据导入******/
 /*******************/
-/**笔记本电脑型号家族**/
+/**轮播图片与ID**/
 INSERT INTO cpc_index_corsouel VALUES
-(NULL,1, '../../assets/img/index/background1.jpg', '34356734', now(), "172.0.0.1"),
-(NULL,3, '../../assets/img/index/background2.jpg', '23445554', now(), "172.0.0.1"),
-(NULL,3, '../../assets/img/index/background3.jpg', '34543534', now(), "172.0.0.1"),
-(NULL,1, '../../assets/img/index/background4.jpg', '44444434', now(), "172.0.0.1");
+(NULL,1, './static/img/index/background1.jpg', '34356734', now(), "172.0.0.1"),
+(NULL,3, './static/img/index/background2.jpg', '23445554', now(), "172.0.0.1"),
+(NULL,3, './static/img/index/background3.jpg', '34543534', now(), "172.0.0.1"),
+(NULL,1, './static/img/index/background4.jpg', '44444434', now(), "172.0.0.1");
 
 
 /
