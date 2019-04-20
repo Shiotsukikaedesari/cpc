@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <!-- <index-nav></index-nav> -->
+    <barrage></barrage>
     <div class='logoEffect'> 
       <img 
       :src="require('../assets/img/index/new_cpc_logo.png')" 
@@ -26,6 +26,7 @@
 
 <script>
 import backgroundCarousel from './index/backgroundCarousel.vue'
+import barrage from './index/barrage.vue'
 
 export default {
   name: 'index',
@@ -59,7 +60,8 @@ export default {
   },
 
   components: {
-    backgroundCarousel
+    backgroundCarousel,
+    barrage
   }
 }
 </script>
