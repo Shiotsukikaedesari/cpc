@@ -6,8 +6,10 @@
 
   .logoEffect{
     position: absolute;
-    top: 120px;
-    left: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -300px;
     width: 0;
     height: 0;
   }
@@ -48,14 +50,18 @@
 
   .indexTitle{
     position: absolute;
-    top: 500px;
-    left: 520px;
     font-size: 50px;
     text-align: center;
     color: white;
     font-family: 'STHupo';
     text-shadow: 5px 5px 120px;
     z-index: 10;
+    top: 65%;
+    left: 50%;
+    margin-left: -270px;
+    white-space: nowrap;
+    width: 0;
+    height: 0;
     animation: titleAni 5s ease infinite normal;
   }
 

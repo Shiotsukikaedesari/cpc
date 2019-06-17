@@ -2,7 +2,7 @@
     <div class="mainView">
         <div class="carouselMask"></div>
         <div class="carousel" :style="{backgroundImage: carouslBackground}">
-            <div :class="{divAni: divSwitch[0]}" :style="{backgroundImage: divBackground}"></div>
+            <div :class="{divAni: divSwitch[0]}" :style="{'backgroundImage': divBackground, 'height': boxheight}"></div>
             <div :class="{divAni: divSwitch[1]}" :style="{backgroundImage: divBackground}"></div>
             <div :class="{divAni: divSwitch[2]}" :style="{backgroundImage: divBackground}"></div>
             <div :class="{divAni: divSwitch[3]}" :style="{backgroundImage: divBackground}"></div>
@@ -70,6 +70,8 @@ export default {
                 false, false, false, false, false, false, false, false, 
                 false,false,false,false,false,false,false,false,false,false,
              ],
+            boxheight: 300 + 'px',
+
             source:{
                 content: '',
                 aHref: ''
@@ -184,7 +186,7 @@ export default {
     mounted(){
         /////////////////挂载初始轮播///////////////
         // this.rolling();
-        this.carouselTimer = setInterval(this.rolling, 7000);
+        // this.carouselTimer = setInterval(this.rolling, 7000);
     }
 }
 </script>

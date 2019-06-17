@@ -1,9 +1,10 @@
-@divSide: 192px;
-@picPosition: 192px;
+@divSide: 12.5%;
+@picPosition: 12.5%;
+@boxWidth: 12.36979%;
 .divFun(@top: 0px, @left: 0px, @positionX: 0, @positionY: 0){           
     position: absolute;
-    width: 190px;
-    height: 190px;
+    width: @boxWidth;
+    height: @boxWidth*2;
     border: 1px solid transparent;
     // animation: carouselAni 2s ease infinite;
     top: @top;
@@ -15,6 +16,7 @@
 .mainView{
     width: 100%;
     height: 100%;
+    position: relative;
     // background-image: url('../../img/index/background3.jpg');
 
     >.carouselMask{
@@ -39,97 +41,97 @@
             .divFun(0, 0, -1px, -1px);
         }
         >div:nth-child(2){           
-            .divFun(0, @divSide, (-@picPosition - 1), -1px);
+            .divFun(0, @divSide, (@picPosition - 1), -1px);
         }
         >div:nth-child(3){           
-            .divFun(0, 2*@divSide, (-2*@picPosition - 1), -1px);
+            .divFun(0, 2*@divSide, (2*@picPosition - 1), -1px);
         }
         >div:nth-child(4){           
-            .divFun(0, 3*@divSide, (-3*@picPosition - 1), -1px);
+            .divFun(0, 3*@divSide, (3*@picPosition - 1), -1px);
         }
         >div:nth-child(5){           
-            .divFun(0, 4*@divSide, (-4*@picPosition - 1), -1px);
+            .divFun(0, 4*@divSide, (4*@picPosition - 1), -1px);
         }
         >div:nth-child(6){           
-            .divFun(0, 5*@divSide, (-5*@picPosition - 1), -1px);
+            .divFun(0, 5*@divSide, (5*@picPosition - 1), -1px);
         }
         >div:nth-child(7){           
-            .divFun(0, 6*@divSide, (-6*@picPosition - 1), -1px);
+            .divFun(0, 6*@divSide, (6*@picPosition - 1), -1px);
         }
         >div:nth-child(8){           
-            .divFun(0, 7*@divSide, (-7*@picPosition - 1), -1px);
+            .divFun(0, 7*@divSide, (7*@picPosition - 1), -1px);
         }
         >div:nth-child(9){           
-            .divFun(@divSide, 0*@divSide, (-0*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 0*@divSide, (0*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(10){           
-            .divFun(@divSide, 1*@divSide, (-1*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 1*@divSide, (1*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(11){           
-            .divFun(@divSide, 2*@divSide, (-2*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 2*@divSide, (2*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(12){           
-            .divFun(@divSide, 3*@divSide, (-3*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 3*@divSide, (3*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(13){           
-            .divFun(@divSide, 4*@divSide, (-4*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 4*@divSide, (4*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(14){           
-            .divFun(@divSide, 5*@divSide, (-5*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 5*@divSide, (5*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(15){           
-            .divFun(@divSide, 6*@divSide, (-6*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 6*@divSide, (6*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(16){           
-            .divFun(@divSide, 7*@divSide, (-7*@picPosition - 1), (-1*@picPosition - 1));
+            .divFun(@divSide*2, 7*@divSide, (7*@picPosition - 1), (1*@picPosition*2 - 1));
         }
         >div:nth-child(17){           
-            .divFun(2*@divSide, 0*@divSide, (-0*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 0*@divSide, (0*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(18){           
-            .divFun(2*@divSide, 1*@divSide, (-1*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 1*@divSide, (1*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(19){           
-            .divFun(2*@divSide, 2*@divSide, (-2*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 2*@divSide, (2*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(20){           
-            .divFun(2*@divSide, 3*@divSide, (-3*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 3*@divSide, (3*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(21){           
-            .divFun(2*@divSide, 4*@divSide, (-4*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 4*@divSide, (4*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(22){           
-            .divFun(2*@divSide, 5*@divSide, (-5*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 5*@divSide, (5*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(23){           
-            .divFun(2*@divSide, 6*@divSide, (-6*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 6*@divSide, (6*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(24){           
-            .divFun(2*@divSide, 7*@divSide, (-7*@picPosition - 1), (-2*@picPosition - 1));
+            .divFun(2*@divSide*2, 7*@divSide, (7*@picPosition - 1), (2*@picPosition*2 - 1));
         }
         >div:nth-child(25){           
-            .divFun(3*@divSide, 0*@divSide, (-0*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 0*@divSide, (0*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(26){           
-            .divFun(3*@divSide, 1*@divSide, (-1*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 1*@divSide, (1*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(27){           
-            .divFun(3*@divSide, 2*@divSide, (-2*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 2*@divSide, (2*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(28){           
-            .divFun(3*@divSide, 3*@divSide, (-3*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 3*@divSide, (3*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(29){           
-            .divFun(3*@divSide, 4*@divSide, (-4*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 4*@divSide, (4*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(30){           
-            .divFun(3*@divSide, 5*@divSide, (-5*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 5*@divSide, (5*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(31){           
-            .divFun(3*@divSide, 6*@divSide, (-6*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 6*@divSide, (6*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         >div:nth-child(32){           
-            .divFun(3*@divSide, 7*@divSide, (-7*@picPosition - 1), (-3*@picPosition - 1));
+            .divFun(3*@divSide*2, 7*@divSide, (7*@picPosition - 1), (3*@picPosition*2 - 1));
         }
         .divAni{
             animation: carouselAni 2s ease forwards;
@@ -143,8 +145,9 @@
         width: 200px;
         border-top: 1px solid rgba(255, 255, 255, 0.637);
         border-bottom: 1px solid white;
-        left:670px;
-        bottom: 100px;
+        left:50%;
+        margin-left:-100px;
+        bottom: 10%;
         z-index: 2;
         display: flex;
         flex-wrap: wrap;
@@ -166,7 +169,7 @@
     >.source{
         position: absolute;
         left: 0px;
-        bottom: 300px;
+        bottom: 50%;
         z-index: 2;
         background-position-y: 0px;
         >img{
@@ -194,9 +197,10 @@
     }
 
     >.protect{
+        left:50%;
+        margin-left:-100px;
+        bottom: 10%;
         position: absolute;
-        left: 670px;
-        bottom: 100px;
         width: 200px;
         height: 30px;
         background: rgba(0, 0, 0, 0.3);
