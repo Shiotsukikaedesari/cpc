@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import initCss from './assets/css/init.css'
-import $ from './assets/js/jquery-3.3.1'
+// 引入插件
+import $ from 'jquery'
+import axios from 'axios'
+import vueAxios from 'vue-axios'
+
+Vue.use(vueAxios, axios);
 
 Vue.config.productionTip = false
 
@@ -13,6 +17,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
+  components: { App },
+  template: '<App/>'
 })
