@@ -1,6 +1,31 @@
-# cpc
+### cpc
 
 > An animation assocation office website 
+
+##### 脚手架与相关配置
+> * 项目初始化
+>   `npm install`
+
+> * 开发环境启动：
+>	`npm start`
+
+> * 项目打包：
+>	`npm build`
+
+> * 项目e2e测试：
+>	`npm test`
+
+> * 项目jest测试：
+>	`npm unit`
+
+> * 退出测试：
+>	`ctrl+C`
+---
+
+##### 环境配置
+> * 开发环境热部署地址：
+>	losthost:8080
+
 
 ## Build Setup
 

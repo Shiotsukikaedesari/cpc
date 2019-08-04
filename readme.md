@@ -4,34 +4,11 @@
 
 ##### 开发配置
 
-> * 开发环境：vue-cli+less+axios+jquery
+> * 开发环境：Vue-cli+Less+Axios+Jquery+EsLint
 > * 服务器：nodeJS
 > * 数据库：MySql
 > * 后端语言：nodeJS
 ---
-##### 脚手架与相关配置
-> * 项目初始化
->   `npm install`
-
-> * 开发环境启动：
->	`npm start`
-
-> * 项目打包：
->	`npm build`
-
-> * 项目e2e测试：
->	`npm test`
-
-> * 项目jest测试：
->	`npm unit`
-
-> * 退出测试：
->	`ctrl+C`
----
-
-##### 环境配置
-> * 开发环境地址：
->	losthost:8080
 
 ##### 开发版本
 > * verson:1.0.4
