@@ -1,7 +1,7 @@
 {
   "name": "cpc",
   "version": "1.0.0",
-  "description": "cpc foo test",
+  "description": "cpc前端项目脚手架",
   "author": "shiotsuki_kaedasari <564165781@qq.com>",
   "private": true,
   "scripts": {

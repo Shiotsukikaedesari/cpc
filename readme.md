@@ -1,24 +1,42 @@
-﻿# CPC
+﻿### CPC
 
 > An animation assocation office website 
 
 ##### 开发配置
 
-> * 开发环境：vue-cli
-> * 服务器：Apache、nodeJS
-> * 使用数据库：MySql
-> * 后端开发语言：PHP
+> * 开发环境：vue-cli+less+axios+jquery
+> * 服务器：nodeJS
+> * 数据库：MySql
+> * 后端语言：nodeJS
 ---
 ##### 脚手架与相关配置
+> * 项目初始化
+>   `npm install`
 
-> * 项目测试：
->	在cpc文件夹下调出Node命令行（按住shift+鼠标右键：在此处打开命令行，前提配置Node全局）
->	运行`npm start`
+> * 开发环境启动：
+>	`npm start`
+
+> * 项目打包：
+>	`npm build`
+
+> * 项目e2e测试：
+>	`npm test`
+
+> * 项目jest测试：
+>	`npm unit`
 
 > * 退出测试：
->	ctrl+C y 停止
+>	`ctrl+C`
 ---
+
+##### 环境配置
+> * 开发环境地址：
+>	losthost:8080
+
 ##### 开发版本
+> * verson:1.0.4
+> 1. 脚手架重置，项目重置
+
 > * verson:1.0.3
 > 1. 主页响应式适配
 
@@ -36,4 +54,4 @@
 > 1. 优化轮播的点击事件
 ---
 
-### 将要实现：登录逻辑
+### 将要实现：登录
