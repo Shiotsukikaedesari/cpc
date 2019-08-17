@@ -3,7 +3,7 @@
 > An animation assocation office website 
 
 ##### 脚手架与相关配置
-> * 项目初始化
+> * 项目初始化：
 >   `npm install`
 
 > * 开发环境启动：
