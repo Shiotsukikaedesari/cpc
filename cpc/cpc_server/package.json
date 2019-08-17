@@ -1,0 +1,34 @@
+{
+  "name": "cpc-server",
+  "version": "1.2.0",
+  "author": "shiotsuki_kaedasari <564165781@qq.com>",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start ./bin/www --name=express --watch",
+    "stop": "pm2 stop all",
+    "init_db": "node lib/db/init.js",
+    "load_logs": "pm2 logs",
+    "gulp_watch": "gulp watch",
+    "gulp_bulid": "gulp bulid"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^1.6.5",
+    "ora": "^3.4.0",
+    "sequelize": "^5.13.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "pm2": "^3.5.1"
+  }
+}

@@ -4,10 +4,9 @@
 
 ##### 开发配置
 
-> * 开发环境：Vue-cli+Less+Axios+Jquery+EsLint
-> * 服务器：nodeJS
+> * 前端开发环境：Vue-cli+Less+Axios+Jquery+EsLint
+> * 后端开发环境：Express+Sequelize+Pm2+babel-gulp
 > * 数据库：MySql
-> * 后端语言：nodeJS
 ---
 
 ##### 开发版本
