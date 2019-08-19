@@ -1,12 +1,15 @@
 <template>
   <div id="app">
+    <loadingAmiComponent></loadingAmiComponent>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import loadingAmiComponent from './components/common/loadingAmi'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {loadingAmiComponent}
 }
 </script>
 
@@ -22,5 +25,6 @@ export default {
   body, html, #app {
     width: 100%;
     height: 100%;
+    font-family: 'Microsoft Yahei';
   }
 </style>
