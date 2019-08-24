@@ -1,7 +1,7 @@
 <template>
-    <div class="container" @click="videoPlay">
-      <div class="video-play">
-        <div>请点击任意位置</div>
+    <div class="container">
+      <div class="video-play"  v-show="showLinkStart">
+        <div  @click="videoPlay">LINK START</div>
       </div>
         <div class="video">
         <video src="static/index/enjoy_my_life.mp4" loop>
@@ -12,19 +12,28 @@
 </template>
 
 <script>
-// import { setInterval, clearInterval } from 'timers'
+import $ from 'jquery'
 import Bus from '../assets/js/bus'
+import { setTimeout } from 'timers'
 export default {
   data () {
     return {
       browserWidth: '',
       borwserHeight: '',
-      actVideo: false
+      actVideo: false,
+      showLinkStart: true
     }
   },
   methods: {
     // 视频播放click
     videoPlay () {
+      let component = this
+      // 隐藏link start
+      let $videoPlay = $('.video-play')
+      $videoPlay.animate({opacity: 0}, 2000)
+      setTimeout(() => {
+        component.showLinkStart = false
+      }, 2200)
       let video = document.querySelector('video')
       if (this.actVideo === true) {
         return false
@@ -40,9 +49,10 @@ export default {
           clearInterval(timers)
         } else {
           video.volume += 0.1
-          console.log(video.volume)
         }
       }, 500)
+      // 检测登录
+      // TODO: 是否登录接口
     },
     // 子传父，将视频加载完成的通知传递给父组件
     hideLoadingAmi () {
@@ -62,6 +72,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../assets/less/common.less';
   .container {
     position: fixed;
     top: 0;
@@ -75,17 +86,23 @@ export default {
       width: 100%;
       height: 100%;
       display: flex;
-      background: linear-gradient(30deg,black 0%, rgba(255, 0, 0, 0.8) 0%, black 100%);
+      background: radial-gradient(circle,black 0, rgb(8, 3, 42) 70% ,rgba(29, 5, 45, 0.8) 100%);
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      animation: passVideo 15s ease infinite;
       > div {
         font-size: 28px;
         text-shadow: 0 0 6px rgb(157, 157, 157);
         color: white;
+        text-shadow: 0 0 0 rgb(255, 255, 255);
         letter-spacing: 20px;
+        cursor: pointer;
+        transition: all 2s ease;
+        &:hover {
+          color: @themeColor;
+          text-shadow: 0 0 12px rgb(255, 255, 255);
+        }
       }
+
     }
     > .video {
       width: 100%;
@@ -96,19 +113,5 @@ export default {
         object-fit: fill;
       }
     }
-  }
-  // 视频加载完成的背景动画
-  @keyframes passVideo {
-    // 0% {background: linear-gradient(0deg,  black 0%, rgba(255, 0, 0, 0.8) 0%, black 100%)}
-    // // 10% {background: linear-gradient(30deg,  black 0%, rgba(255, 94, 0, 0.8) 10%, black 100%)}
-    // 20% {background: linear-gradient(60deg,  black 0%, rgba(255, 196, 0, 0.8) 20%, black 100%)}
-    // 30% {background: linear-gradient(90deg,  black 0%, rgba(179, 255, 0, 0.8) 30%, black 100%)}
-    // // 40% {background: linear-gradient(120deg,  black 0%, rgba(34, 255, 0, 0.8) 40%, black 100%)}
-    // // 50% {background: linear-gradient(150deg,  black 0%, rgba(0, 255, 51, 0.8) 50%, black 100%)}
-    // 60% {background: linear-gradient(180deg,  black 0%, 0% rgba(0, 255, 217, 0.8) 60%, black 100%)}
-    // 70% {background: linear-gradient(210deg,  black 0%, rgba(0, 76, 255, 0.8) 70%, black 100%)}
-    // // 80% {background: linear-gradient(240deg,  black 0%, rgba(0, 0, 255, 0.8) 80%, black 100%)}
-    // // 90% {background: linear-gradient(270deg,  black 0%, rgba(166, 0, 255, 0.8) 90%, black 100%)}
-    // 100% {background: linear-gradient(300deg,  black 0%, rgba(255, 0, 106, 0.8) 100%, black 100%)}
   }
 </style>

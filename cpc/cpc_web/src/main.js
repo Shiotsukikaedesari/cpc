@@ -8,6 +8,9 @@ import router from './router'
 import $ from 'jquery'
 import axios from 'axios'
 import vueAxios from 'vue-axios'
+// 引入图标UI
+import './assets/iconfont/iconfont'
+import './assets/iconfont/iconfont.css'
 
 Vue.use(vueAxios, axios)
 
