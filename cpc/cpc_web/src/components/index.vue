@@ -4,9 +4,9 @@
         <div  @click="videoPlay">LINK START</div>
       </div>
         <div class="video">
-        <video src="static/index/enjoy_my_life.mp4" loop>
-          您的浏览器不支持本视频的播放哦(Ｔ▽Ｔ)
-        </video>
+          <video src="static/index/enjoy_my_life.mp4" loop>
+            您的浏览器不支持本视频的播放哦(Ｔ▽Ｔ)
+          </video>
       </div>
     </div>
 </template>
@@ -33,6 +33,8 @@ export default {
       $videoPlay.animate({opacity: 0}, 2000)
       setTimeout(() => {
         component.showLinkStart = false
+        console.log('隐藏完成，返回值')
+        component.$emit('loadingDesktop', true)
       }, 2200)
       let video = document.querySelector('video')
       if (this.actVideo === true) {
@@ -54,7 +56,7 @@ export default {
       // 检测登录
       // TODO: 是否登录接口
     },
-    // 子传父，将视频加载完成的通知传递给父组件
+    // 将视频加载完成的通知传递给兄弟组件
     hideLoadingAmi () {
       console.log('完成触发')
       Bus.$emit('showLoadingAmi', false)
@@ -80,7 +82,7 @@ export default {
     width: 100%;
     height: 100%;
     > .video-play {
-      position: relative;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -89,6 +91,7 @@ export default {
       background: radial-gradient(circle,black 0, rgb(8, 3, 42) 70% ,rgba(29, 5, 45, 0.8) 100%);
       align-items: center;
       justify-content: center;
+      z-index: 1;
       > div {
         font-size: 28px;
         text-shadow: 0 0 6px rgb(157, 157, 157);
@@ -96,7 +99,7 @@ export default {
         text-shadow: 0 0 0 rgb(255, 255, 255);
         letter-spacing: 20px;
         cursor: pointer;
-        transition: all 2s ease;
+        transition: all 1300ms ease;
         &:hover {
           color: @themeColor;
           text-shadow: 0 0 12px rgb(255, 255, 255);
