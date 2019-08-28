@@ -1,13 +1,24 @@
 <template>
     <div :class="{'container': true, 'containerLoading': containerLoading}">
-        <div class="header-image">
-            <img src="static/image/userHeader.jpg" alt="">
+        <div class="stage">
+            <div class="box">
+              <div class="header-image box-left">
+                <img src="static/image/userHeader.jpg" alt="">
+              </div>
+              <div class="box-right">
+                <div class="person-exprience"></div>
+                <div class="person-name">Shiotsuki_Kaedesari</div>
+                <div class="person-level">
+                    <div>
+                      <svg class="icon icon-style" aria-hidden="true">
+                        <use xlink:href="#icon-man"></use>
+                      </svg>
+                      <span>LV6</span>
+                    </div>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="person-level flex-center">
-            <span>LV6</span>
-        </div>
-        <div class="person-name">汐月枫尘</div>
-        <div class="person-exprience"></div>
     </div>
 </template>
 
@@ -30,7 +41,6 @@ export default {
   },
 
   mounted () {
-    console.log(2)
     this.containerAmi()
   }
 }
@@ -40,67 +50,80 @@ export default {
 @import '../assets/less/common.less';
     .container {
         position: fixed;
-         top: 5px;
+         top: 1%;
         left: -100px;
         z-index: @personMessageZIndex;
         transition: all 1500ms ease;
-        > .header-image {
-            position: absolute;
-            overflow: hidden;
-            width: 100px;
-            height: 100px;
-            top: 0;
-            left: 0;
-            border: 2px solid @themeColor;
-            box-shadow: 0 0 5px @themeColor;
-            background: white;
-        }
-        > .person-level {
-            position: absolute;
-            top: 80px;
-            left: 85px;
-            z-index: @personMessageZIndex + 1;
-            background: red;
-            border: 0;
-            border-radius: 3px;
-            > span {
-                display: inline-block;
-                padding: 3px 5px;
-                color: white;
-                font-size: 12px;
-                font-weight: 900;text-shadow: 0 0 2px white;
-            }
-        }
-        > .person-name {
-            position: absolute;
-            top: 0px;
-            left: 120px;
-            color: white;
-            letter-spacing: 10px;
-            font-size: 24px;
-            padding: 10px 0 10px 10px;
-            text-align: center;
-            text-shadow: 0 0 5px @themeColor;
-            white-space: nowrap;
-            border-top: 4px solid @themeColor;
+        > .stage {
+          perspective: 1000px;
+          > .box {
+            display: flex;
+            // flex-direction: column;
+            transform-style: preserve-3d;
+            transform-origin: 0% 200%;
+            transform: rotateY(20deg);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            transition: all 1500ms ease;
             cursor: pointer;
-            transition: all 1s linear;
+            box-shadow: 0 0 12px @themeColor;
             &:hover {
-                color: @themeColor;
-                text-shadow: 0 0 4px white;
+              transform: rotateY(0);
+              box-shadow: 0 0 12px white;
             }
-        }
+            > .header-image {
+              overflow: hidden;
+              width: 100px;
+              height: 100px;
+              border: 3px solid @themeColor;
+              box-shadow: 0 0 12px white;
+              margin-right: 20px;
+              transition: all 1500ms ease;
+              &:hover {
+                border: 3px solid white;
+                box-shadow: 0 0 12px @themeColor;
+              }
+            }
+            > .box-right {
+              border: 3px solid rgba(0, 0, 0, 0);
+              height: 100px;
+              > .person-exprience {
+                width: 100px;
+                height: 30px;
+                background: white;
+              }
+              > .person-name {
+                margin: 10px 0;
+                font-size: 22px;
+                color: white;
+                transition: all 1500ms ease;
+                &:hover {
+                  color: @themeColor;
+                  text-shadow: 0 0 8px white;
+                }
+              }
+              > .person-level {
+                display: flex;
+                align-items: center;
+                color: white;
+                transition: all 1500ms ease;
+                &:hover {
+                    background: white;
+                    color: @themeColor;
+                  }
+                > div {
+                  display: inline-block;
+                  > .icon-style {
+                    color: rgb(51, 187, 255);
 
-        > .person-exprience {
-            position: absolute;
-            top: 82px;
-            left: 130px;
-            height: 20px;
-            width: 200px;
-            background: @themeColor;
+                  }
+                }
+              }
+            }
+          }
         }
     }
     .containerLoading {
-        left: 5px;
+        left: 1%;
     }
 </style>

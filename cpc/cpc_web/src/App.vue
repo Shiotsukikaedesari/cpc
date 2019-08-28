@@ -9,20 +9,13 @@
     <router-view @loadingDesktop="loadingDesktop"></router-view>
     <!-- 登录窗口 -->
     <!-- <loginComponent></loginComponent> -->
-    <div class="left-stage">
-      <div class="left-box">
-        <!-- 个人信息导航 -->
-        <personMessageComponent v-if="canShowDesktop"></personMessageComponent>
-      </div>
-    </div>
+    <!-- 个人信息导航 -->
+    <personMessageComponent v-if="canShowDesktop"></personMessageComponent>
+
     <!-- 下拉导航 -->
     <dropDownComponent></dropDownComponent>
     <!-- 左侧导航 -->
-    <div class="right-stage">
-      <div class="right-box">
-        <!-- 个人信息导航 -->
-      </div>
-    </div>
+    <!-- 个人信息导航 -->
   </div>
 </template>
 
