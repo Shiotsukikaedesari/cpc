@@ -10,7 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // '/bilibili': {
+      //   target: 'https://api.bilibili.com',
+      //   changeOrigin: true,
+      //   pathWrite: {
+      //     '^/bilibili': '/'
+      //   }
+      // },
+      // '/bilibiliIndex': {
+      //   target: 'https://api.live.bilibili.com/room/v1/RoomRecommend/biliIndexRecList',
+      //   changeOrigin: true,
+      //   pathWrite: {
+      //     '^/bilibiliIndex': '/'
+      //   }
+      // }
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST

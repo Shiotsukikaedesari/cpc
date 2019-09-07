@@ -11,7 +11,8 @@
     <!-- <loginComponent></loginComponent> -->
     <!-- 个人信息导航 -->
     <personMessageComponent v-if="canShowDesktop"></personMessageComponent>
-
+    <!-- B站相关服务 -->
+    <bilibiliComponent v-if="canShowDesktop"></bilibiliComponent>
     <!-- 下拉导航 -->
     <dropDownComponent></dropDownComponent>
     <!-- 左侧导航 -->
@@ -24,13 +25,15 @@ import loadingAmiComponent from './components/common/loadingAmi'
 import loginComponent from './components/login'
 import dropDownComponent from './components/dropDown'
 import personMessageComponent from './components/personMessage'
+import bilibiliComponent from './components/bilibili'
 export default {
   name: 'App',
   components: {
     loadingAmiComponent,
     loginComponent,
     dropDownComponent,
-    personMessageComponent
+    personMessageComponent,
+    bilibiliComponent
   },
   data () {
     return {
