@@ -15,8 +15,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// 引入全局less
-@import '../assets/less/common.less';
   .container {
     width: 100%;
     height: 100%;
