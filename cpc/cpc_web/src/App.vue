@@ -3,8 +3,8 @@
     <!-- 加载loading组件 -->
     <loadingAmiComponent></loadingAmiComponent>
     <!-- 信息提示组件 -->
+    <topTipsComponent @topTips="topTips"></topTipsComponent>
     <!-- 信息确定组件 -->
-    <!-- 警告组件 -->
     <!-- 主要的网页视图router层 -->
     <router-view @loadingDesktop="loadingDesktop"></router-view>
     <!-- 登录窗口 -->
@@ -22,6 +22,7 @@
 
 <script>
 import loadingAmiComponent from './components/common/loadingAmi'
+import topTipsComponent from './components/common/topTips'
 import loginComponent from './components/login'
 import dropDownComponent from './components/dropDown'
 import personMessageComponent from './components/personMessage'
@@ -30,6 +31,7 @@ export default {
   name: 'App',
   components: {
     loadingAmiComponent,
+    topTipsComponent,
     loginComponent,
     dropDownComponent,
     personMessageComponent,
