@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import { setTimeout } from 'timers'
 export default {
   name: 'personMessage',
   data () {
@@ -36,7 +35,7 @@ export default {
       let component = this
       setTimeout(() => {
         component.containerLoading = true
-      }, 200)
+      }, 500)
     }
   },
 
