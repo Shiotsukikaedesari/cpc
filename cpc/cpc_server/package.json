@@ -21,7 +21,7 @@
     "morgan": "~1.9.1",
     "mysql2": "^1.6.5",
     "ora": "^3.4.0",
-    "sequelize": "^5.13.1"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
